@@ -1,11 +1,11 @@
-import React from 'react'
+import React from "react";
 
-function home() {
+function Home() {
   return (
-    <div>
-      
-    </div>
-  )
+    <main className="flex justify-center">
+      <div className=" min-w-[85%] border border-slate-100">home</div>
+    </main>
+  );
 }
 
-export default home
+export default Home;
