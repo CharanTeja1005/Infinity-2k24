@@ -23,7 +23,7 @@ function Card({ poster, title, description, form_link }) {
               href="#"
               className="text-sky-500 transition-all duration-300 group-hover:text-white"
             >
-              Read the docs &rarr;
+              Explore More &rarr;
             </a>
           </p>
         </div>

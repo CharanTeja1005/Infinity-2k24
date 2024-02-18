@@ -2,10 +2,11 @@ import React, { useState } from "react";
 import Card from "../components/Card";
 import event_info from "../data/events_info";
 import CardSkeleton from "../components/CardSkeleton";
+import { ReactTyped } from "react-typed";
 
 function Events() {
   const [showcard, setShowcard] = useState(false);
-  const [eventInfoCard, setEventInfoCard] = useState({});
+  const [eventInfoCard, setEventInfoCard] = useState(event_info[0]);
 
   const cards = event_info.map((event) => (
     <div
@@ -34,32 +35,43 @@ function Events() {
         {cards}
       </div>
       <div
-      // className={`border border-white flex justify-center ${
-      //   showcard ? "visible" : "hidden"
-      // } h-fit`}
+        className={`border border-white flex justify-center ${
+          showcard ? "visible" : "hidden"
+        } h-fit`}
       >
-        <CardSkeleton />
-        {/* <div class="p-8 max-w-lg border border-indigo-300 rounded-2xl hover:shadow-xl hover:shadow-indigo-50 flex flex-col items-center">
+        {/* <CardSkeleton /> */}
+        <div className="p-8 max-w-lg border border-indigo-300 rounded-2xl hover:shadow-xl hover:shadow-indigo-50 flex flex-col items-center">
           <img
             src="https://loremflickr.com/800/600/girl"
-            class="shadow rounded-lg overflow-hidden border"
+            className="shadow rounded-lg overflow-hidden border"
           />
-          <div class="mt-8">
-            <h4 class="font-bold text-xl">Exercises</h4>
-            <p class="mt-2 text-gray-600">
-              Create Exercises for any subject with the topics you and your
-              students care about.
+          <div className="mt-8">
+            <h4 className="font-bold text-xl">
+              <ReactTyped
+                startWhenVisible
+                showCursor={false}
+                typeSpeed={50}
+                strings={[eventInfoCard.title]}
+              />
+            </h4>
+            <p className="mt-2 text-gray-600">
+              <ReactTyped
+                startWhenVisible
+                showCursor={false}
+                typeSpeed={50}
+                strings={[eventInfoCard.description]}
+              />
             </p>
-            <div class="mt-5">
+            <div className="mt-5">
               <button
                 type="button"
-                class="inline-flex items-center rounded-md border border-transparent bg-gray-800 px-3 py-2 text-sm font-medium leading-4 text-white shadow-sm hover:bg-gray-900"
+                className="inline-flex items-center rounded-md border border-transparent bg-gray-800 px-3 py-2 text-sm font-medium leading-4 text-white shadow-sm hover:bg-gray-900"
               >
-                Start Creating
+                form Link
               </button>
             </div>
           </div>
-        </div> */}
+        </div>
       </div>
     </div>
   );

@@ -96,7 +96,7 @@ const Navbar = () => {
                   `${isActive ? "text-blue-700" : ""} nav-link`
                 }
               >
-                Contact us
+                Sponsers
               </NavLink>
             </li>
           </ul>
