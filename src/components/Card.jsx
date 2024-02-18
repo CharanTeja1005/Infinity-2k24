@@ -1,4 +1,5 @@
 import React from "react";
+import { ReactTyped } from "react-typed";
 
 function Card({ poster, title, description, form_link }) {
   return (
@@ -9,7 +10,12 @@ function Card({ poster, title, description, form_link }) {
           <img className="rounded-md" src={poster} />
         </span>
         <div className="space-y-6 pt-5 text-2xl font-bold leading-7 text-gray-500 transition-all duration-300 group-hover:text-white/90">
-          <h2>{title}</h2>
+          <ReactTyped
+            startWhenVisible
+            strings={[title]}
+            typeSpeed={70}
+            cursorChar="_"
+          />
         </div>
         <div className="pt-5 text-base font-semibold leading-7">
           <p>
