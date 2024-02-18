@@ -5,6 +5,7 @@ import "./index.css";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import Events from "./pages/Events.jsx";
 import Home from "./pages/Homepage.jsx";
+import SponsorsPage from "./pages/SponsorsPage.jsx";
 
 const router = createBrowserRouter([
   {
@@ -28,8 +29,8 @@ const router = createBrowserRouter([
         element: <div>workshop</div>,
       },
       {
-        path: "/contact",
-        element: <div>contact</div>,
+        path: "/sponsers",
+        element: <SponsorsPage />,
       },
     ],
   },
